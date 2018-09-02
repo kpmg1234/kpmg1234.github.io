@@ -1,0 +1,96 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+@font-face {
+  font-family: 'KPMG';
+  src: url("./../fonts/KPMG-Light.eot");
+  font-weight: 300;
+  font-style: normal; }
+a {
+  color: #90959a; }
+
+html {
+  height: 100%; }
+  html body {
+    font-family: KPMG;
+    font-weight: 300;
+    height: 100%;
+    background: #f1f1f1; }
+    html body #menuLeft {
+      background-image: linear-gradient(-218deg, #6A11CB 0%, #2575FC 100%);
+      min-width: 200px; }
+      html body #menuLeft .brands-kpmg {
+        width: 220px;
+        line-height: 30px; }
+        html body #menuLeft .brands-kpmg .name-brands {
+          font-weight: bold;
+          font-size: 24px;
+          position: relative; }
+          html body #menuLeft .brands-kpmg .name-brands:hover {
+            text-decoration: none; }
+          html body #menuLeft .brands-kpmg .name-brands:after {
+            content: "";
+            width: 24px;
+            height: 3px;
+            background: #ffffff;
+            position: absolute;
+            left: 24%;
+            bottom: -2px;
+            display: block; }
+        html body #menuLeft .brands-kpmg .sologan-brands {
+          font-size: 13px; }
+      html body #menuLeft .list-menu {
+        margin-top: 40px; }
+        html body #menuLeft .list-menu ul .nav-item {
+          font-size: 17px;
+          margin-bottom: 15px; }
+          html body #menuLeft .list-menu ul .nav-item a {
+            color: white !important; }
+          html body #menuLeft .list-menu ul .nav-item:hover {
+            background: #ffffff;
+            border-radius: 5px; }
+            html body #menuLeft .list-menu ul .nav-item:hover a {
+              color: #b2b2b2 !important; }
+            html body #menuLeft .list-menu ul .nav-item:hover i {
+              color: #b2b2b2; }
+    html body .content-right .acount-user a {
+      color: #b2b2b2; }
+    html body .content-right .title {
+      color: #505050;
+      font-size: 40px; }
+    html body .content-right .show-content-right .nav-tabs {
+      position: relative; }
+      html body .content-right .show-content-right .nav-tabs .nav-item {
+        border: none; }
+        html body .content-right .show-content-right .nav-tabs .nav-item .nav-link {
+          padding: 8px 65px;
+          font-weight: bold; }
+        html body .content-right .show-content-right .nav-tabs .nav-item .nav-link.active {
+          background: transparent !important;
+          border-color: transparent;
+          border-bottom: 3px solid #4b39db; }
+      html body .content-right .show-content-right .nav-tabs .chat {
+        position: absolute;
+        right: 0px;
+        top: -10px; }
+    html body .content-right .show-content-right .tab-content {
+      background: #ffffff; }
+      html body .content-right .show-content-right .tab-content .tab-pane .btn {
+        background: #bc204b;
+        color: white;
+        border-radius: 0; }
+
+.ui.multiple.dropdown > .label {
+  -webkit-border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  border-radius: 20px !important;
+  font-size: 20px;
+  color: white;
+  background: #c7007d;
+  margin-right: 18px; }
+
+i.icon.delete:before {
+  content: url("./../images/icon/close.png") !important; }
+
+/*# sourceMappingURL=setting.css.map */

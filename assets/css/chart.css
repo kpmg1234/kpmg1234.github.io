@@ -1,0 +1,121 @@
+/*chart head*/
+.chart1--head {
+    margin: 3% auto 1%;
+    display: flex;
+    width: 95%;
+    padding-left: 12%;
+    align-items: center;
+}
+.head--left{
+    display: flex;
+    font-weight: bold;
+    color: #f1a6b3;
+    font-size: 15px;
+}
+#datepicker,#datepicker2,#datepicker3{
+    color: #f1a6b3;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1.5px solid;
+    width: 83px;
+    text-align: center;
+}
+#abc,#abc2,#abc3{
+    border: 1.5px solid lightgray;
+    width: 18%;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 8px;
+    color: #808080c4;
+    font-weight: bold;
+    transition:0.5s;
+}
+#abc:hover,#abc2:hover,#abc3:hover{
+    background:#aba7a7ad;
+    color:#ffffff;
+    transition: 0.5s;
+}
+/*chart body*/
+.carousel-control-prev ,.carousel-control-next{
+    position: absolute;
+    top: 47%;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 6%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+    height: 13%;
+}
+
+.highcharts-legend-item > .highcharts-graph,.highcharts-button-symbol,
+.highcharts-button-box,.highcharts-credits,.canvasjs-chart-credit{
+    display: none;
+}
+/*chart footer*/
+.chart--footer{
+    width: 89%;
+    margin: 0 auto;
+    font-size: 16px;
+}
+.box{
+    width: 96%;
+    margin: 0 auto;
+    border-radius: 7px;
+}
+.box--1{
+    background-color: deepskyblue;
+}
+.box--2{
+    background-color: #cc0f4e;
+}
+.box--3{
+    background-color: #bda052;
+}
+.box--4{
+    background-color: #8f0da9;
+}
+.box--5{
+    background-color: #a5673f;
+}
+.box--6{
+    background-color: #313130;
+}
+.box--7{
+    background-color: #daab8d;
+}
+.box--1--txt{
+    font-size: 17px;
+    margin-bottom: -7%;
+    padding-top: 10%;
+}
+.box--1--num{
+    font-size: 95px;
+}
+#sumNum,#sumNum2,#sumNum3{
+    color: #b3aeae;
+}
+
+/*CHART 2*/
+.chart2--body{
+    width: 67.6%!important;
+    margin-bottom: 29px!important;
+}
+
+/*CHART 3*/
+.border--icon{
+    margin: 0 5% 0 7%;
+    background-color: white;
+    width: 28%;
+    height: 16%;
+    padding: 4% 0;
+    border-radius: 50%;
+}
+.bor--icon2{
+    padding: 7% 0!important;
+}

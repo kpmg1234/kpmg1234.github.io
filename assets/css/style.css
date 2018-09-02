@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  pading: 0; }
+
+body {
+  font-family: DaxVN,Tahoma,sans-serif; }
+
+.form-signin {
+  width: 418px;
+  padding-top: 201px;
+  margin: auto; }
+  .form-signin .logo .form-decsription {
+    margin: 10px auto; }
+  .form-signin-title {
+    color: #ed1e24;
+    font-size: 35.97px;
+    margin-top: 50px; }
+  .form-signin-text-decs {
+    display: block;
+    margin: auto;
+    margin: 2px 0 35px 0; }
+  .form-signin-warnig {
+    color: red; }
+  .form-signin-input {
+    height: 45px;
+    border: 2px solid #b5b9bd52; }
+  .form-signin-checkbox {
+    margin-top: 24px; }
+  .form-signin-submit-btn {
+    margin: 38px 0 30px 0;
+    cursor: pointer; }
+  .form-signin-footer .text-muted {
+    font-size: 15px;
+    transform: translateY(6px);
+    display: inline-block; }
+  .form-signin label.error {
+    color: red; }
+  .form-signin .form-signin-input.error {
+    border-color: red; }
+
+/*# sourceMappingURL=style.css.map */

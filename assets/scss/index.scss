@@ -1,0 +1,743 @@
+$auditColor: #0191d8;
+$taxColor: #bc1f4a;
+$advisoryColor: #eaaa00;
+$centralsrvColor: #c3007b;
+$normalColor: #90959a;
+$btnColor: #bc204b;
+
+@font-face {
+  font-family: 'KPMG';
+  src: url('KPMG-Light.eot');
+  src: url('KPMG-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/KPMG-Light.woff2') format('woff2'), url('KPMG-Light.woff') format('woff'), url('KPMG-Light.ttf') format('truetype'), url('KPMG-Light.svg#KPMG-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+.modal-backdrop {
+  background-color: #5566ff;
+}
+
+a {
+  color: $normalColor;
+}
+
+.bg-audit {
+  background: $auditColor !important;
+}
+
+.bg-tax {
+  background: $taxColor !important;
+}
+
+.bg-advisory {
+  background: $advisoryColor !important;
+}
+
+.bg-centralsrv {
+  background: $centralsrvColor !important;
+}
+
+html {
+  height: 100%;
+
+  body {
+    /*font-family: KPMG;*/
+    /*font-weight: 300;
+    height: 100%;*/
+    background: #f1f1f1;
+
+    #menuLeft {
+      background-image: linear-gradient(-218deg, #6A11CB 0%, #2575FC 100%);
+
+      .brands-kpmg {
+        .name-brands {
+          font-weight: bold;
+          position: relative;
+          font-size: 38px;
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:after {
+            content: "";
+            width: 35px;
+            height: 4px;
+            background: #ffffff;
+            position: absolute;
+            left: 35%;
+            bottom: -5px;
+            display: block;
+          }
+        }
+        .sologan-brands{
+          text-transform: uppercase;
+          font-size: 15px;
+          word-spacing: 4px;
+          margin-top: 8px;
+        }
+      }
+
+
+      .list-menu {
+        ul {
+          .nav-item {
+            font-size: 17px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            .icon-nav{
+              width: 25px!important;
+              height: auto!important;
+            }
+
+            &:hover, &.active {
+              background: #ffffff;
+              border-radius: 5px;
+
+              a {
+                color: #4a494a !important;
+              }
+
+              i {
+                color: #b2b2b2;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #content-right {
+      .acount-user {
+        a {
+          font-size: 16px;;
+          cursor: pointer;
+          margin-right: 35px;
+          font-weight: bold;
+          i{
+            font-size: 24px;
+          }
+        }
+      }
+
+      .title {
+        color: #505050;
+        font-size: 4em;
+      }
+
+      .content-top {
+        z-index: 100;
+        position: relative;
+
+        .search-btn {
+         #icon-search{
+           cursor: pointer;
+           transform: translateY(8px);
+         }
+        }
+
+        #multi-select {
+          border: none;
+          background-color: transparent;
+
+          .menu {
+            .item {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .show-content-right {
+        .nav-tabs {
+          position: relative;
+
+          .nav-item {
+            border: none;
+
+            .nav-link {
+              padding: 8px 75px;
+              font-weight: bold;
+              :hover{
+                font-weight: bold!important;
+              }
+            }
+
+            .nav-link.active {
+              background: transparent !important;
+              border-color: transparent;
+              border-bottom: 3px solid #4b39db;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .tab-content {
+          background: #ffffff;
+
+          .tab-pane {
+            overflow: hidden;
+
+            .current-report {
+              position: relative;
+              border-radius: 30px !important;
+              z-index: 12 !important;
+              background: #ffffff;
+
+              i {
+                cursor: pointer;
+              }
+            }
+
+            .btn-zoom-group {
+              position: relative;
+              //height: 92px;
+              z-index: 999;
+
+              .btn-zoom {
+                width: 50px !important;
+                position: absolute;
+                right: 10px;
+                top: 0;
+              }
+            }
+
+            .map {
+              height: 500px;
+
+              &::-webkit-scrollbar {
+                display: none;
+              }
+
+              #map-office {
+                z-index: 0 !important;
+
+              }
+
+              .avatar {
+                z-index: 1 !important;
+                position: relative;
+                border: 2px solid red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// css ui select
+.ui.multiple.dropdown > .label {
+  -webkit-border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  border-radius: 20px !important;
+  font-size: 20px;
+  color: white;
+  //background: #c7007d;
+  margin-right: 18px;
+  min-width: 210px;
+  position: relative;
+  padding-left: 25px;
+}
+
+i.icon.delete:before {
+  content: url("./../images/icon/close.png") !important;
+}
+// end css ui select
+
+//side bar
+.sidenav {
+  height: 100%;
+  max-width: 400px;
+  position: fixed;
+  top: 0;
+  right: -420px;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 25px;
+  z-index: 10001;
+  box-shadow: 0px 0px 30px 0px grey;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .sideBarSearch {
+    .fas {
+      font-size: 21px;
+      cursor: pointer;
+    }
+
+    .closebtn {
+      font-size: 40px;
+    }
+  }
+
+  .member-infor-detail {
+    .avatar {
+      border: 2px solid red;
+      width: 80px;
+      height: 80px;
+    }
+
+    .more-detail {
+      .name {
+        color: #6a6a6a;
+        font-size: 25px;
+      }
+
+      .position {
+        color: #939393;
+      }
+
+      .sub-name {
+        color: #6c757d8f;
+        font-size: 17px!important;
+      }
+    }
+  }
+
+  .title {
+    display: inline-block;
+    text-align: right;
+    font-size: 1em !important;
+    width: 90px;
+  }
+
+  .dob {
+    color: #676767;
+    border-top: 2px solid #cabebe;
+    border-bottom: 2px solid #cabebe;
+  }
+
+  .contact {
+    color: #676767;
+    border-bottom: 2px solid #cabebe;
+    .list-number {
+      .number {
+      }
+    }
+  }
+
+  .top-favorite {
+    .favarite-title {
+      font-weight: bold;
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    .progress-bar {
+      height: 9px;
+      border-radius: 20px;
+    }
+
+    .number-percent {
+      color: #b7204d;
+    }
+  }
+
+  .btn-email {
+    background: #e67787;
+    margin-top: 5em;
+    color: white;
+    font-size: 25px;
+    border-radius: 15px;
+  }
+
+  .more-detail-lg {
+    text-align: right;
+    cursor: pointer;
+    color: $normalColor;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .total-profile {
+    .one-profile {
+      .title-profile {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .list-group {
+        .list-group-item {
+          .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            float: left;
+          }
+          &:first-child {
+            border-top: 0px solid #ffffff;
+          }
+          &:last-child{
+            border-bottom: 1px solid #8080803d;
+          }
+        }
+      }
+    }
+  }
+}
+
+// css modal
+.detail-member {
+  .modal-dialog {
+    max-width: 85% !important;
+
+    .modal-content {
+      height: 800px !important;
+      overflow: hidden;
+      border-radius: 15px !important;
+
+      .modal-header {
+      }
+
+      .left {
+        .member-infor-detail {
+          .avatar {
+            border: 2px solid red;
+            width: 80px!important;
+            height: 80px!important;
+          }
+
+          .more-detail {
+            .name {
+              font-size: 24px;
+              color: #6a6a6a;
+            }
+
+            .position {
+              color: #939393;
+              font-size: 13px;
+            }
+
+            .sub-name {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .title {
+          width: 30%;
+          display: inline-block;
+          text-align: right;
+          float: left;
+        }
+
+        .dob {
+          color: #676767;
+          border-top: 2px solid #cabebe;
+          border-bottom: 2px solid #cabebe;
+        }
+
+        .contact {
+          color: #676767;
+          border-bottom: 2px solid #cabebe;
+
+          .list-number {
+            .number {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .top-favorite {
+          .favarite-title {
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          .title {
+            text-align: left;
+            width: 30%;
+          }
+
+          .progress-bar {
+            width: 40px;
+            height: 9px;
+            border-radius: 20px;
+          }
+
+          .number-percent {
+            color: #b7204d;
+          }
+        }
+
+        .btn-email {
+          background: #e67787;
+          margin-top: 85px;
+          color: white;
+          font-size: 18px;
+          border-radius: 15px;
+        }
+      }
+      //css right
+      .right {
+        padding-bottom: 20px;
+        overflow-y: scroll;
+        height: 90% !important;
+
+        table {
+          thead {
+            th {
+              border-top: 0px !important;
+            }
+          }
+
+          tbody {
+            height: 500px;
+            overflow-y: scroll;
+          }
+        }
+      }
+    }
+  }
+}
+//css chat modal
+// end css modal box
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.chat {
+  .icon-chat{
+    cursor: pointer!important;
+    transform: translateY(-3px);
+  }
+}
+
+#chat-box {
+  box-shadow: 1px 1px 9px 1px #888888;
+  width: 350px;
+  height: 500px;
+  right: -355px;
+  top: unset;
+  bottom: 80px;
+  padding: 0 !important;
+
+  .chat {
+    img{
+      cursor: pointer!important;
+    }
+    .title-chat {
+      padding: 18px;
+
+      .title-name {
+        font-size: 20px;
+      }
+
+    }
+
+    .area-chat {
+      position: relative;
+      height: 80%;
+
+      .rules {
+        position: absolute;
+        top: 7px;
+        right: 15px;
+        color: $normalColor;
+        font-size: 19px;
+        cursor: pointer;
+      }
+
+      .example-chat {
+        position: absolute;
+        left: 14px;
+        bottom: 10px;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        .text {
+          font-size: 14px;
+
+          .hello {
+          }
+        }
+      }
+    }
+
+    .input-chat {
+      .chats {
+        width: 77%;
+        height: 35px;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+// profile detail modal box
+#moreDetailInforMember{
+  .title{
+    font-size: 22px!important;
+  }
+}
+//css modal box rules
+.rules-box {
+  .modal-dialog {
+    max-width: 60% !important;
+    min-width: 1366px;
+
+    .modal-content {
+      position: relative;
+
+      .title {
+        font-size: 30px;
+        color: $normalColor;
+      }
+
+      .list-rule {
+        max-height: 500px;
+        overflow-y: scroll;
+
+        table {
+          color: $normalColor;
+
+          thead {
+            th {
+              border-top: 0px !important;
+            }
+          }
+        }
+      }
+
+      .modal-body {
+        .back {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .btn-create-rule, .btn-add {
+      position: absolute;
+      left: 50%;
+      bottom: 90px;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+
+    .btn-add {
+      bottom: 50%;
+      left: 80%;
+    }
+  }
+}
+.delete.icon{
+  position: absolute;
+  right: 20px;
+}
+.btn-create-rule{
+  padding: 10px 15% !important;
+  border-radius: 10px;
+}
+.form-create{
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #efefef;
+  margin: 25px 10% 25px 5%;
+}
+#inlineFormCustomSelect{
+  margin-right: 5% !important;
+}
+.rules-box .modal-dialog .btn-add {
+  bottom: 50%;
+  left: 85%;
+  border-radius: 10px;}
+.btn-wip{
+  background: $btnColor;
+  color:white;
+  font-weight: bold;
+}
+.main-content{
+  padding-top: 82px;
+}
+#modalbox-rules {
+  .title{
+    width: 182px;
+    font-size: 30px!important;
+    font-weight: bold;
+  }
+}
+#rules-informaition{
+  display: inline!important;
+  width:100%;
+}
+//nam
+/*nam*/
+/*staff*/
+html body #menuLeft .brands-kpmg .name-brands{
+  font-size: 2em!important;
+}
+#myTabContent{
+  height: 100%!important;
+}
+html body #menuLeft .brands-kpmg .sologan-brands{
+  font-size: 13px;
+  margin-left: 6px!important;
+  word-spacing: normal;
+  margin-right: 0!important;
+}
+html body #content-right .title{
+  margin-bottom: 13px;
+}
+div.show-content-right{
+  margin-top: 5%!important;
+}
+#content-right{
+  padding-right: 3rem!important;
+}
+.dot{
+  margin-right: 2%;
+}
+/*feed*/
+#clubhouse-tab, #external-tab{
+  font-size: 17px;
+}
+.button_addfeed {
+  width: 180px;
+  border: 2px solid #dad6d6 !important;
+  color: #999999 !important;
+  font-weight: bold;
+}
+/*setting*/
+.btn-edit,.btn-delete,.btn-update{
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+#rules{
+  overflow: auto!important;
+}
+/*menu left*/
+.nav-item{
+  height: 57px;
+}
+#start_day,#end_day{
+  border: none!important;
+}
+.bold{
+  font-weight: bold!important;
+}
+#moreDetailInforMemberCurrent{
+  .title{
+    font-size: 22px!important;
+  }
+}
+.nav-item{
+  height: auto;
+}
